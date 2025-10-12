@@ -38,10 +38,9 @@ const OurStorySection = () => {
                 mb: 4,
               }}
             >
-              C.A.W.S began as a dream to revolutionize competitive exam preparation. Founded by
+              C.A.W.S. began as a dream to revolutionize competitive exam preparation. Founded by
               Sarika, an accomplished educator with a passion for unlocking student potential, our
-              institute was built on the foundation of personalized learning and proven
-              methodologies.
+              institute was built on the foundation of efficient learning and proven methodologies.
             </Typography>
 
             <Typography
@@ -53,8 +52,8 @@ const OurStorySection = () => {
               }}
             >
               What started as a small coaching center has grown into a renowned institution, trusted
-              by thousands of students across the nation. Our success lies in our unwavering
-              commitment to understanding each student's unique strengths and challenges.
+              by many students. Our success lies in our unwavering commitment to understanding each 
+              student's unique strengths and challenges.
             </Typography>
 
             <Typography
@@ -65,7 +64,7 @@ const OurStorySection = () => {
                 mb: 6,
               }}
             >
-              Today, C.A.W.S stands as a testament to the power of dedicated mentorship, innovative
+              Today, C.A.W.S. stands as a testament to the power of dedicated mentorship, innovative
               teaching methods, and the relentless pursuit of excellence in education.
             </Typography>
 

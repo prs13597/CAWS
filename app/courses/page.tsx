@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation';
 import CoursesHeroSection from '@/components/CoursesHeroSection';
 import CourseFeaturesSection from '@/components/CourseFeaturesSection';
-import CourseCardsSection from '@/components/CourseCardsSection';
+import NewCourseCardsSection from '@/components/NewCourseCardsSection';
 import CoursesCTASection from '@/components/CoursesCTASection';
 import Footer from '@/components/Footer';
 
@@ -11,7 +11,7 @@ export default function CoursesPage() {
       <Navigation />
       <CoursesHeroSection />
       <CourseFeaturesSection />
-      <CourseCardsSection />
+      <NewCourseCardsSection />
       <CoursesCTASection />
       <Footer />
     </main>

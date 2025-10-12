@@ -3,17 +3,31 @@
 import React from 'react';
 import { Box, Typography, Container, IconButton, Divider } from '@mui/material';
 import { Facebook, Twitter, Instagram, LinkedIn, LocationOn, Phone, Email } from '@mui/icons-material';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
-  const quickLinks = ['Home', 'About Us', 'Courses', 'Vision', 'Contact', 'Student Portal', 'Results & Updates'];
+  const quickLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Courses', href: '/courses' },
+    { name: 'Vision', href: '/vision' },
+    { name: 'Contact', href: '/contact' },
+  ];
   
   const ourCourses = [
-    'Banking & Finance Preparation',
-    'SSC Competitive Exams',
-    'UPSC Civil Services',
-    'Railway Recruitment Board',
-    'State Government Jobs',
-    'Defence Services Examination'
+    'CAT (Common Admission Test)',
+    'SNAP (Symbiosis National Aptitude Test)',
+    'NMAT (NMIMS Management Aptitude Test)',
+    'MBA-CET',
+    'CMAT (Common Management Admission Test)',
+    'IPMAT (Integrated Program)',
+    'BBA (Bachelor of Business Administration)',
+    'NPAT (National Test)',
+    'Christ University Entrance Test (CUET)',
+    'Hotel Management - NCHMJEE',
+    'SET (Symbiosis Entrance Test)',
+    'BBA CET'
   ];
 
   return (
@@ -35,25 +49,35 @@ const Footer = () => {
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
               <Box
                 sx={{
-                  width: 40,
-                  height: 40,
-                  backgroundColor: '#3b82f6',
+                  width: 70,
+                  height: 70,
                   borderRadius: '50%',
+                  overflow: 'hidden',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  backgroundColor: 'white',
+                  padding: '4px',
                 }}
               >
-                <Typography sx={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>
-                  📚
-                </Typography>
+                <Image
+                  src="/caws-logo.jpg"
+                  alt="C.A.W.S. Logo"
+                  width={62}
+                  height={62}
+                  style={{ 
+                    borderRadius: '50%', 
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                  }}
+                />
               </Box>
               <Box>
                 <Typography variant="h6" sx={{ color: 'white', fontWeight: 'bold', fontSize: '20px' }}>
-                  C.A.W.S
+                  C.A.W.S.
                 </Typography>
                 <Typography sx={{ color: '#9ca3af', fontSize: '12px' }}>
-                  Turning potential into performance
+                  Crack Aptitude With Sarika
                 </Typography>
               </Box>
             </Box>
@@ -93,20 +117,25 @@ const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               {quickLinks.map((link, index) => (
-                <Typography
+                <Link 
                   key={index}
-                  sx={{
-                    color: '#d1d5db',
-                    cursor: 'pointer',
-                    fontSize: '0.9rem',
-                    '&:hover': {
-                      color: '#3b82f6',
-                    },
-                    transition: 'color 0.3s ease',
-                  }}
+                  href={link.href} 
+                  style={{ textDecoration: 'none' }}
                 >
-                  {link}
-                </Typography>
+                  <Typography
+                    sx={{
+                      color: '#d1d5db',
+                      cursor: 'pointer',
+                      fontSize: '0.9rem',
+                      '&:hover': {
+                        color: '#3b82f6',
+                      },
+                      transition: 'color 0.3s ease',
+                    }}
+                  >
+                    {link.name}
+                  </Typography>
+                </Link>
               ))}
             </Box>
           </Box>
@@ -118,20 +147,25 @@ const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               {ourCourses.map((course, index) => (
-                <Typography
+                <Link 
                   key={index}
-                  sx={{
-                    color: '#d1d5db',
-                    cursor: 'pointer',
-                    fontSize: '0.9rem',
-                    '&:hover': {
-                      color: '#3b82f6',
-                    },
-                    transition: 'color 0.3s ease',
-                  }}
+                  href="/courses" 
+                  style={{ textDecoration: 'none' }}
                 >
-                  {course}
-                </Typography>
+                  <Typography
+                    sx={{
+                      color: '#d1d5db',
+                      cursor: 'pointer',
+                      fontSize: '0.9rem',
+                      '&:hover': {
+                        color: '#3b82f6',
+                      },
+                      transition: 'color 0.3s ease',
+                    }}
+                  >
+                    {course}
+                  </Typography>
+                </Link>
               ))}
             </Box>
           </Box>
@@ -146,11 +180,13 @@ const Footer = () => {
                 <LocationOn sx={{ color: '#3b82f6', fontSize: 20, mt: 0.5 }} />
                 <Box>
                   <Typography sx={{ color: '#d1d5db', fontSize: '0.9rem', fontWeight: 'bold' }}>
-                    C.A.W.S Coaching Institute
+                    C.A.W.S. Coaching Institute
                   </Typography>
-                  <Typography sx={{ color: '#9ca3af', fontSize: '0.8rem' }}>
-                    123 Education Street<br />
-                    Knowledge City, Delhi - 110001
+                  <Typography sx={{ color: '#9ca3af', fontSize: '0.8rem', lineHeight: 1.4 }}>
+                    4th Floor, Maruti Plaza B - Wing<br />
+                    Keshavrao More Marg, Vidya Vikas Cir,<br />
+                    above Shagun Tadka Hotel<br />
+                    Nashik, Maharashtra 422005
                   </Typography>
                 </Box>
               </Box>
@@ -159,10 +195,10 @@ const Footer = () => {
                 <Phone sx={{ color: '#3b82f6', fontSize: 20 }} />
                 <Box>
                   <Typography sx={{ color: '#d1d5db', fontSize: '0.9rem' }}>
-                    +91 98765 43210
+                    8788568664
                   </Typography>
                   <Typography sx={{ color: '#9ca3af', fontSize: '0.8rem' }}>
-                    +91 87654 32109
+                    Mon-Sat: 10am-8pm, Sun: 10am-2pm
                   </Typography>
                 </Box>
               </Box>
@@ -171,10 +207,10 @@ const Footer = () => {
                 <Email sx={{ color: '#3b82f6', fontSize: 20 }} />
                 <Box>
                   <Typography sx={{ color: '#d1d5db', fontSize: '0.9rem' }}>
-                    info@caws.edu.in
+                    caws.academy@gmail.com
                   </Typography>
                   <Typography sx={{ color: '#9ca3af', fontSize: '0.8rem' }}>
-                    admissions@caws.edu.in
+                    We respond within 24 hours
                   </Typography>
                 </Box>
               </Box>
@@ -196,7 +232,7 @@ const Footer = () => {
           }}
         >
           <Typography sx={{ color: '#9ca3af', fontSize: '0.9rem' }}>
-            © 2024 C.A.W.S Coaching Institute. All rights reserved.
+            © 2024 C.A.W.S. Coaching Institute. All rights reserved.
           </Typography>
 
           <Box sx={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>

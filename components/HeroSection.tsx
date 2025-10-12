@@ -4,6 +4,7 @@ import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import { ArrowForward } from '@mui/icons-material';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HeroSection = () => {
   return (
@@ -41,7 +42,7 @@ const HeroSection = () => {
                   color: 'transparent',
                 }}
               >
-                C.A.W.S
+                C.A.W.S.
               </Typography>
             </Box>
           </Typography>
@@ -55,7 +56,7 @@ const HeroSection = () => {
               lineHeight: 1.6,
             }}
           >
-            Turning potential into performance
+            Crack Aptitude With Sarika
           </Typography>
 
           <Typography
@@ -73,48 +74,52 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <Box sx={{ display: 'flex', gap: 3, flexDirection: { xs: 'column', sm: 'row' }, mb: 6 }}>
-            <Button
-              variant="contained"
-              endIcon={<ArrowForward />}
-              sx={{
-                background: 'linear-gradient(45deg, #3b82f6, #10b981)',
-                color: 'white',
-                borderRadius: '25px',
-                px: 4,
-                py: 1.5,
-                fontSize: '1rem',
-                fontWeight: 'bold',
-                textTransform: 'none',
-                '&:hover': {
-                  background: 'linear-gradient(45deg, #2563eb, #059669)',
-                  transform: 'translateY(-2px)',
-                },
-                transition: 'all 0.3s ease',
-              }}
-            >
-              Start Your Journey
-            </Button>
+            <Link href="/contact" style={{ textDecoration: 'none' }}>
+              <Button
+                variant="contained"
+                endIcon={<ArrowForward />}
+                sx={{
+                  background: 'linear-gradient(45deg, #3b82f6, #10b981)',
+                  color: 'white',
+                  borderRadius: '25px',
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '1rem',
+                  fontWeight: 'bold',
+                  textTransform: 'none',
+                  '&:hover': {
+                    background: 'linear-gradient(45deg, #2563eb, #059669)',
+                    transform: 'translateY(-2px)',
+                  },
+                  transition: 'all 0.3s ease',
+                }}
+              >
+                Start Your Journey
+              </Button>
+            </Link>
             
-            <Button
-              variant="outlined"
-              sx={{
-                color: '#4b5563',
-                borderColor: '#d1d5db',
-                borderRadius: '25px',
-                px: 4,
-                py: 1.5,
-                fontSize: '1rem',
-                fontWeight: 'bold',
-                textTransform: 'none',
-                '&:hover': {
-                  borderColor: '#3b82f6',
-                  color: '#3b82f6',
-                  backgroundColor: '#f8fafc',
-                },
-              }}
-            >
-              View Courses
-            </Button>
+            <Link href="/courses" style={{ textDecoration: 'none' }}>
+              <Button
+                variant="outlined"
+                sx={{
+                  color: '#4b5563',
+                  borderColor: '#d1d5db',
+                  borderRadius: '25px',
+                  px: 4,
+                  py: 1.5,
+                  fontSize: '1rem',
+                  fontWeight: 'bold',
+                  textTransform: 'none',
+                  '&:hover': {
+                    borderColor: '#3b82f6',
+                    color: '#3b82f6',
+                    backgroundColor: '#f8fafc',
+                  },
+                }}
+              >
+                View Courses
+              </Button>
+            </Link>
           </Box>
 
           {/* Stats */}
@@ -128,25 +133,10 @@ const HeroSection = () => {
                   fontSize: { xs: '1.5rem', md: '2rem' },
                 }}
               >
-                500+
+                1000+
               </Typography>
               <Typography sx={{ color: '#6b7280', fontSize: { xs: '0.8rem', md: '0.9rem' } }}>
                 Success Stories
-              </Typography>
-            </Box>
-            <Box sx={{ textAlign: 'center', flex: 1 }}>
-              <Typography
-                variant="h4"
-                sx={{
-                  fontWeight: 'bold',
-                  color: '#f59e0b',
-                  fontSize: { xs: '1.5rem', md: '2rem' },
-                }}
-              >
-                95%
-              </Typography>
-              <Typography sx={{ color: '#6b7280', fontSize: { xs: '0.8rem', md: '0.9rem' } }}>
-                Success Rate
               </Typography>
             </Box>
             <Box sx={{ textAlign: 'center', flex: 1 }}>
@@ -179,12 +169,14 @@ const HeroSection = () => {
             }}
           >
             <Image
-              src="/Screenshot 2025-09-22 at 2.09.14 AM.png"
-              alt="Students learning together"
+              src="/sarika-hero-image.jpg"
+              alt="Sarika - CAWS Founder and Expert Instructor"
               fill
               style={{
                 objectFit: 'cover',
+                objectPosition: 'center',
               }}
+              priority
             />
             <Box
               sx={{

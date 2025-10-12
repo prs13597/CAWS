@@ -16,14 +16,14 @@ const SuccessStoriesSection = () => {
     {
       name: 'Rahul Gupta',
       achievement: 'AIR 23 - Government Exam',
-      testimonial: '"The expert guidance and comprehensive study material at C.A.W.S are unmatched."',
+      testimonial: '"The expert guidance and comprehensive study material at C.A.W.S. are unmatched."',
       rating: 5,
       achievementColor: '#3b82f6',
     },
     {
       name: 'Anjali Patel',
       achievement: 'AIR 67 - Competitive Exam',
-      testimonial: '"Thanks to C.A.W.S, I not only cleared the exam but exceeded my own expectations."',
+      testimonial: '"Thanks to C.A.W.S., I not only cleared the exam but exceeded my own expectations."',
       rating: 5,
       achievementColor: '#f59e0b',
     },
@@ -66,7 +66,7 @@ const SuccessStoriesSection = () => {
               lineHeight: 1.6,
             }}
           >
-            Hear from our successful candidates who achieved their dreams with C.A.W.S
+            Hear from our successful candidates who achieved their dreams with C.A.W.S.
           </Typography>
         </Box>
 

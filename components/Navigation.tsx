@@ -5,6 +5,7 @@ import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, Lis
 import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const Navigation = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,16 +19,38 @@ const Navigation = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Courses', path: '/courses' },
-    { name: 'Vision', path: '/vision' },
+    { name: 'Fun Events', path: '/fun-events' },
     { name: 'Contact', path: '/contact' },
   ];
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2 }}>
-        <Typography variant="h6" sx={{ color: '#2563eb', fontWeight: 'bold' }}>
-          C.A.W.S
-        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Box
+            sx={{
+              width: 30,
+              height: 30,
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Image
+              src="/caws-logo.jpg"
+              alt="C.A.W.S. Logo"
+              width={30}
+              height={30}
+              style={{
+                objectFit: 'contain',
+              }}
+            />
+          </Box>
+          <Typography variant="h6" sx={{ color: '#1a365d', fontFamily: 'Canvas Sans, Arial, sans-serif', fontWeight: 'bold' }}>
+            C.A.W.S.
+          </Typography>
+        </Box>
         <IconButton>
           <CloseIcon />
         </IconButton>
@@ -69,31 +92,38 @@ const Navigation = () => {
         <Container maxWidth="xl">
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             {/* Logo */}
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              <Box
-                sx={{
-                  width: 40,
-                  height: 40,
-                  backgroundColor: '#3b82f6',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <Typography sx={{ color: 'white', fontWeight: 'bold', fontSize: '16px' }}>
-                  📚
-                </Typography>
+            <Link href="/" style={{ textDecoration: 'none' }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, cursor: 'pointer' }}>
+                <Box
+                  sx={{
+                    width: 50,
+                    height: 50,
+                    position: 'relative',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Image
+                    src="/caws-logo.jpg"
+                    alt="C.A.W.S. Logo"
+                    width={50}
+                    height={50}
+                    style={{
+                      objectFit: 'contain',
+                    }}
+                  />
+                </Box>
+                <Box>
+                  <Typography variant="h6" sx={{ color: '#1a365d', fontFamily: 'Canvas Sans, Arial, sans-serif', fontWeight: 'bold', fontSize: '20px' }}>
+                    C.A.W.S.
+                  </Typography>
+                  <Typography sx={{ color: '#6b7280', fontSize: '12px' }}>
+                    Crack Aptitude With Sarika
+                  </Typography>
+                </Box>
               </Box>
-              <Box>
-                <Typography variant="h6" sx={{ color: '#2563eb', fontWeight: 'bold', fontSize: '20px' }}>
-                  C.A.W.S
-                </Typography>
-                <Typography sx={{ color: '#6b7280', fontSize: '12px' }}>
-                  Turning potential into performance
-                </Typography>
-              </Box>
-            </Box>
+            </Link>
 
             {/* Desktop Menu */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 4 }}>

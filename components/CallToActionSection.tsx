@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
+import Link from 'next/link';
 
 const CallToActionSection = () => {
   return (
@@ -54,7 +55,7 @@ const CallToActionSection = () => {
               textShadow: '0 1px 2px rgba(0,0,0,0.2)',
             }}
           >
-            Join C.A.W.S today and take the first step towards achieving your competitive exam
+            Join C.A.W.S. today and take the first step towards achieving your competitive exam
             goals.
           </Typography>
 
@@ -68,55 +69,59 @@ const CallToActionSection = () => {
               alignItems: 'center',
             }}
           >
-            <Button
-              variant="contained"
-              size="large"
-              sx={{
-                backgroundColor: 'white',
-                color: '#3b82f6',
-                borderRadius: '30px',
-                px: 5,
-                py: 2,
-                fontSize: '1.1rem',
-                fontWeight: 'bold',
-                textTransform: 'none',
-                boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)',
-                '&:hover': {
-                  backgroundColor: '#f8fafc',
-                  transform: 'translateY(-2px)',
-                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.3)',
-                },
-                transition: 'all 0.3s ease',
-                minWidth: { xs: '200px', sm: 'auto' },
-              }}
-            >
-              Enroll Now
-            </Button>
+            <Link href="/contact" style={{ textDecoration: 'none' }}>
+              <Button
+                variant="contained"
+                size="large"
+                sx={{
+                  backgroundColor: 'white',
+                  color: '#3b82f6',
+                  borderRadius: '30px',
+                  px: 5,
+                  py: 2,
+                  fontSize: '1.1rem',
+                  fontWeight: 'bold',
+                  textTransform: 'none',
+                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)',
+                  '&:hover': {
+                    backgroundColor: '#f8fafc',
+                    transform: 'translateY(-2px)',
+                    boxShadow: '0 12px 35px rgba(0, 0, 0, 0.3)',
+                  },
+                  transition: 'all 0.3s ease',
+                  minWidth: { xs: '200px', sm: 'auto' },
+                }}
+              >
+                Enroll Now
+              </Button>
+            </Link>
 
-            <Button
-              variant="outlined"
-              size="large"
-              sx={{
-                borderColor: 'rgba(255, 255, 255, 0.5)',
-                color: 'white',
-                borderRadius: '30px',
-                px: 5,
-                py: 2,
-                fontSize: '1.1rem',
-                fontWeight: 'bold',
-                textTransform: 'none',
-                borderWidth: '2px',
-                '&:hover': {
-                  borderColor: 'white',
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                  transform: 'translateY(-2px)',
-                },
-                transition: 'all 0.3s ease',
-                minWidth: { xs: '200px', sm: 'auto' },
-              }}
-            >
-              Contact Us
-            </Button>
+            <Link href="/contact" style={{ textDecoration: 'none' }}>
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  borderColor: 'rgba(255, 255, 255, 0.5)',
+                  color: 'white',
+                  borderRadius: '30px',
+                  px: 5,
+                  py: 2,
+                  fontSize: '1.1rem',
+                  fontWeight: 'bold',
+                  textTransform: 'none',
+                  borderWidth: '2px',
+                  '&:hover': {
+                    borderColor: 'white',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                    transform: 'translateY(-2px)',
+                  },
+                  transition: 'all 0.3s ease',
+                  minWidth: { xs: '200px', sm: 'auto' },
+                }}
+              >
+                Contact Us
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Container>

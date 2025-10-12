@@ -5,6 +5,17 @@ import { Box, Container, Typography, Button, Card, CardContent } from '@mui/mate
 import { LocationOn, Directions, Map } from '@mui/icons-material';
 
 const ContactLocationSection: React.FC = () => {
+  const address = "C.A.W.S., 4th Floor, Maruti Plaza B - Wing Keshavrao More Marg, Vidya Vikas Cir, above Shagun Tadka Hotel, Nashik, Maharashtra 422005";
+  const encodedAddress = encodeURIComponent(address);
+  
+  const handleGetDirections = () => {
+    window.open('https://www.google.com/maps/dir//5,+first+floor,+Archit+Arcade,+College+Rd,+Ramdas+Colony,+Nashik,+Maharashtra+422005/@20.0054679,73.6828741,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bddebb49cb515c5:0xcd5c22acafc90743!2m2!1d73.7652758!2d20.0054869?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D', '_blank');
+  };
+  
+  const handleViewInMaps = () => {
+    window.open('https://www.google.com/maps/dir//5,+first+floor,+Archit+Arcade,+College+Rd,+Ramdas+Colony,+Nashik,+Maharashtra+422005/@20.0054679,73.6828741,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bddebb49cb515c5:0xcd5c22acafc90743!2m2!1d73.7652758!2d20.0054869?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D', '_blank');
+  };
+
   return (
     <Box sx={{ 
       py: { xs: 8, md: 12 },
@@ -51,8 +62,15 @@ const ContactLocationSection: React.FC = () => {
                 borderRadius: 3,
                 border: '1px solid #e2e8f0',
                 boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)',
+                  transform: 'translateY(-2px)',
+                }
               }}
+              onClick={handleViewInMaps}
             >
               <Box
                 sx={{
@@ -83,7 +101,7 @@ const ContactLocationSection: React.FC = () => {
                     maxWidth: '300px'
                   }}
                 >
-                  Click "View in Maps" below to see our exact location and get directions
+                  Click here to see our exact location and get directions
                 </Typography>
               </Box>
             </Card>
@@ -123,7 +141,7 @@ const ContactLocationSection: React.FC = () => {
                     mb: 3
                   }}
                 >
-                  C.A.W.S Coaching Institute
+                  C.A.W.S. Coaching Institute
                 </Typography>
                 
                 <Typography
@@ -134,7 +152,7 @@ const ContactLocationSection: React.FC = () => {
                     lineHeight: 1.6
                   }}
                 >
-                  123 Education Street, Knowledge City, Delhi - 110001, India
+                  C.A.W.S., 4th Floor, Maruti Plaza B - Wing Keshavrao More Marg, Vidya Vikas Cir, above Shagun Tadka Hotel, Nashik, Maharashtra 422005
                 </Typography>
                 
                 <Box
@@ -147,6 +165,7 @@ const ContactLocationSection: React.FC = () => {
                   <Button
                     variant="contained"
                     startIcon={<Directions />}
+                    onClick={handleGetDirections}
                     sx={{
                       backgroundColor: '#3b82f6',
                       color: 'white',
@@ -165,6 +184,7 @@ const ContactLocationSection: React.FC = () => {
                   <Button
                     variant="outlined"
                     startIcon={<Map />}
+                    onClick={handleViewInMaps}
                     sx={{
                       borderColor: '#3b82f6',
                       color: '#3b82f6',

@@ -57,7 +57,7 @@ const CoreValuesSection = () => {
               lineHeight: 1.6,
             }}
           >
-            The principles that guide everything we do at C.A.W.S
+            The principles that guide everything we do at C.A.W.S.
           </Typography>
         </Box>
 

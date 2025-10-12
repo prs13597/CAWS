@@ -2,40 +2,35 @@
 
 import React from 'react';
 import { Box, Typography, Container, Card, CardContent } from '@mui/material';
-import { MenuBook, Person, TrendingUp, TrackChanges } from '@mui/icons-material';
 
-const FeaturesSection = () => {
-  const features = [
+const FunEventsGallery = () => {
+  // Placeholder sections for events - can be updated with actual images later
+  const eventSections = [
     {
-      icon: <MenuBook sx={{ fontSize: 40, color: '#3b82f6' }} />,
-      title: 'Highly Experienced Faculty',
-      description: 'Bringing a decade of academic expertise and practical knowledge to foster student success and innovation.',
-      iconBg: '#dbeafe',
+      title: 'Academic Celebrations',
+      description: 'Celebrating student achievements and academic milestones',
+      images: [], // Will be populated with actual images
     },
     {
-      icon: <Person sx={{ fontSize: 40, color: '#3b82f6' }} />,
-      title: 'Personalized Attention & Support',
-      description: 'Tailoring guidance and resources to meet each student\'s unique needs for their academic and personal growth.',
-      iconBg: '#dbeafe',
+      title: 'Festival Celebrations',
+      description: 'Joy and cultural celebrations throughout the year',
+      images: [], // Will be populated with actual images
     },
     {
-      icon: <TrendingUp sx={{ fontSize: 40, color: '#3b82f6' }} />,
-      title: 'Online + Offline Interactive Sessions',
-      description: 'Engaging students through a blend of virtual and in-person learning experiences for a comprehensive education.',
-      iconBg: '#dbeafe',
+      title: 'Success Parties',
+      description: 'Celebrating our students\' exam success and achievements',
+      images: [], // Will be populated with actual images
     },
     {
-      icon: <TrackChanges sx={{ fontSize: 40, color: '#3b82f6' }} />,
-      title: 'Goal-Oriented Approach',
-      description: 'Structured curriculum designed to help you crack competitive exams with confidence.',
-      iconBg: '#dbeafe',
+      title: 'Interactive Sessions',
+      description: 'Fun learning activities and engaging classroom moments',
+      images: [], // Will be populated with actual images
     },
   ];
 
   return (
     <Box sx={{ py: 10, backgroundColor: '#f8fafc' }}>
       <Container maxWidth="xl">
-        {/* Section Header */}
         <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography
             variant="h3"
@@ -46,7 +41,7 @@ const FeaturesSection = () => {
               mb: 3,
             }}
           >
-            Why Choose C.A.W.S.?
+            Our Event Gallery
           </Typography>
           <Typography
             sx={{
@@ -57,28 +52,25 @@ const FeaturesSection = () => {
               lineHeight: 1.6,
             }}
           >
-            We combine expertise, personalization, and proven results to help you achieve your
-            competitive exam goals.
+            Experience the joy, learning, and memorable moments at C.A.W.S. through our event gallery.
           </Typography>
         </Box>
 
-        {/* Features Grid */}
+        {/* Event Sections */}
         <Box
           sx={{
             display: 'grid',
             gridTemplateColumns: {
               xs: '1fr',
-              sm: 'repeat(2, 1fr)',
-              lg: 'repeat(4, 1fr)',
+              md: 'repeat(2, 1fr)',
             },
-            gap: 4,
+            gap: 6,
           }}
         >
-          {features.map((feature, index) => (
+          {eventSections.map((section, index) => (
             <Card
               key={index}
               sx={{
-                height: '100%',
                 borderRadius: '16px',
                 boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
                 transition: 'all 0.3s ease',
@@ -89,54 +81,63 @@ const FeaturesSection = () => {
                 },
               }}
             >
-              <CardContent sx={{ p: 4, textAlign: 'center', height: '100%' }}>
-                {/* Icon */}
+              <CardContent sx={{ p: 4 }}>
+                {/* Placeholder for images */}
                 <Box
                   sx={{
-                    width: 80,
-                    height: 80,
-                    backgroundColor: feature.iconBg,
-                    borderRadius: '50%',
+                    height: 200,
+                    backgroundColor: '#e5e7eb',
+                    borderRadius: '12px',
+                    mb: 3,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    mx: 'auto',
-                    mb: 3,
                   }}
                 >
-                  {feature.icon}
+                  <Typography sx={{ color: '#9ca3af', fontSize: '0.9rem' }}>
+                    Event Photos Coming Soon
+                  </Typography>
                 </Box>
 
-                {/* Title */}
                 <Typography
-                  variant="h6"
+                  variant="h5"
                   sx={{
                     fontWeight: 'bold',
                     color: '#1f2937',
                     mb: 2,
-                    fontSize: '1.25rem',
                   }}
                 >
-                  {feature.title}
+                  {section.title}
                 </Typography>
 
-                {/* Description */}
                 <Typography
                   sx={{
                     color: '#6b7280',
                     lineHeight: 1.6,
-                    fontSize: '0.95rem',
                   }}
                 >
-                  {feature.description}
+                  {section.description}
                 </Typography>
               </CardContent>
             </Card>
           ))}
+        </Box>
+
+        {/* Note about upcoming photos */}
+        <Box sx={{ textAlign: 'center', mt: 8 }}>
+          <Typography
+            sx={{
+              fontSize: '1rem',
+              color: '#6b7280',
+              fontStyle: 'italic',
+            }}
+          >
+            More event photos and memories will be added soon. Stay tuned for updates!
+          </Typography>
         </Box>
       </Container>
     </Box>
   );
 };
 
-export default FeaturesSection;
+export default FunEventsGallery;

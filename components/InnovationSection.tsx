@@ -60,7 +60,7 @@ const InnovationSection: React.FC = () => {
                 mb: 4
               }}
             >
-              At C.A.W.S, innovation isn't just a buzzword—it's the foundation of everything we do. 
+              At C.A.W.S., innovation isn't just a buzzword—it's the foundation of everything we do. 
               We constantly evolve our teaching methodologies, embrace cutting-edge technology, and 
               create learning experiences that prepare our students for tomorrow's challenges.
             </Typography>

@@ -32,7 +32,7 @@ const AboutHeroSection = () => {
                   color: 'transparent',
                 }}
               >
-                C.A.W.S
+                C.A.W.S.
               </Typography>
             </Box>
           </Typography>
@@ -48,7 +48,7 @@ const AboutHeroSection = () => {
               fontWeight: 'medium',
             }}
           >
-            Crack Aptitude with Sarika - Empowering dreams through excellence in education
+            Crack Aptitude with Sarika (C.A.W.S.) – Empowering Dreams, Simplifying Success
           </Typography>
 
           {/* Description */}
@@ -62,10 +62,11 @@ const AboutHeroSection = () => {
               textAlign: 'center',
             }}
           >
-            Founded with a vision to transform the landscape of competitive exam preparation, C.A.W.S has
-            been a beacon of hope for thousands of aspirants. Our institute stands for "Crack Aptitude with
-            Sarika," representing our commitment to personalized, expert-led coaching that turns potential
-            into performance.
+            At C.A.W.S., we believe that aptitude should never be a barrier to ambition. Founded with the vision to redefine competitive exam preparation, our mission is simple yet powerful: to make aptitude learning easier, smarter, and more effective for every student.
+            <br /><br />
+            With expert-led guidance, innovative teaching methods, and simplified approaches, we transform complex concepts into clear, easy-to-grasp strategies. For many of aspirants, C.A.W.S. has been more than just an institute—it's been a trusted partner in turning potential into performance, and dreams into achievements.
+            <br /><br />
+            Because at Crack Aptitude with Sarika, excellence isn't just taught—it's inspired.
           </Typography>
         </Box>
       </Container>

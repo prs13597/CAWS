@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
+import Link from 'next/link';
 
 const AboutCTASection = () => {
   return (
@@ -54,34 +55,36 @@ const AboutCTASection = () => {
               textShadow: '0 1px 2px rgba(0,0,0,0.2)',
             }}
           >
-            Join thousands of successful candidates who transformed their careers with C.A.W.S
+            Join thousands of successful candidates who transformed their careers with C.A.W.S.
           </Typography>
 
           {/* Action Button */}
-          <Button
-            variant="contained"
-            size="large"
-            sx={{
-              backgroundColor: 'white',
-              color: '#3b82f6',
-              borderRadius: '30px',
-              px: 6,
-              py: 2,
-              fontSize: '1.1rem',
-              fontWeight: 'bold',
-              textTransform: 'none',
-              boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)',
-              '&:hover': {
-                backgroundColor: '#f8fafc',
-                transform: 'translateY(-2px)',
-                boxShadow: '0 12px 35px rgba(0, 0, 0, 0.3)',
-              },
-              transition: 'all 0.3s ease',
-              minWidth: { xs: '200px', sm: 'auto' },
-            }}
-          >
-            Contact Us Today
-          </Button>
+          <Link href="/contact" style={{ textDecoration: 'none' }}>
+            <Button
+              variant="contained"
+              size="large"
+              sx={{
+                backgroundColor: 'white',
+                color: '#3b82f6',
+                borderRadius: '30px',
+                px: 6,
+                py: 2,
+                fontSize: '1.1rem',
+                fontWeight: 'bold',
+                textTransform: 'none',
+                boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)',
+                '&:hover': {
+                  backgroundColor: '#f8fafc',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 12px 35px rgba(0, 0, 0, 0.3)',
+                },
+                transition: 'all 0.3s ease',
+                minWidth: { xs: '200px', sm: 'auto' },
+              }}
+            >
+              Contact Us Today
+            </Button>
+          </Link>
         </Box>
       </Container>
     </Box>

@@ -8,11 +8,11 @@ const ContactInfoSection: React.FC = () => {
   const contactCards = [
     {
       icon: <LocationOn sx={{ fontSize: 48, color: '#3b82f6' }} />,
-      title: "Visit Our Campus",
+      title: "Visit Our Institute",
       content: [
-        "C.A.W.S Coaching Institute",
-        "123 Education Street, Knowledge City",
-        "Delhi - 110001, India"
+        "C.A.W.S., 4th Floor, Maruti Plaza B - Wing",
+        "Keshavrao More Marg, Vidya Vikas Cir,",
+        "above Shagun Tadka Hotel, Nashik, Maharashtra 422005"
       ],
       buttonText: "Get Directions",
       buttonColor: "primary"
@@ -21,9 +21,9 @@ const ContactInfoSection: React.FC = () => {
       icon: <Phone sx={{ fontSize: 48, color: '#059669' }} />,
       title: "Call Us",
       content: [
-        "+91 98765 43210",
-        "+91 87654 32109",
-        "Monday to Saturday: 9 AM - 7 PM"
+        "8788568664",
+        "Monday to Saturday - 10am to 8pm",
+        "Sunday 10-2pm"
       ],
       buttonText: "Call Now",
       buttonColor: "success"
@@ -32,8 +32,7 @@ const ContactInfoSection: React.FC = () => {
       icon: <Email sx={{ fontSize: 48, color: '#dc2626' }} />,
       title: "Email Us",
       content: [
-        "info@caws.edu.in",
-        "admissions@caws.edu.in",
+        "caws.academy@gmail.com",
         "We respond within 24 hours"
       ],
       buttonText: "Send Email",
@@ -43,8 +42,8 @@ const ContactInfoSection: React.FC = () => {
       icon: <Schedule sx={{ fontSize: 48, color: '#7c3aed' }} />,
       title: "Office Hours",
       content: [
-        "Monday - Saturday: 9:00 AM - 7:00 PM",
-        "Sunday: 10:00 AM - 4:00 PM",
+        "Monday - Saturday: 9:00 AM - 8:00 PM",
+        "Sunday: 10:00 AM - 2:00 PM",
         "National Holidays: Closed"
       ],
       buttonText: "View Schedule",

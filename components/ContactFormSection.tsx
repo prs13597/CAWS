@@ -27,12 +27,20 @@ const ContactFormSection: React.FC = () => {
   });
 
   const courses = [
-    'Banking & Finance Preparation',
-    'SSC Competitive Exams',
-    'UPSC Civil Services',
-    'Railway Recruitment Board',
-    'State Government Jobs',
-    'Defence Services Examination'
+    'CAT (Common Admission Test)',
+    'SNAP (Symbiosis National Aptitude Test)',
+    'NMAT (NMIMS Management Aptitude Test)',
+    'MBA-CET',
+    'CMAT (Common Management Admission Test)',
+    'Group Discussion & Personal Interviews',
+    'IPMAT (Integrated Program in Management Aptitude Test)',
+    'BBA (Bachelor of Business Administration)',
+    'NPAT (National Test for Programs After Twelfth)',
+    'Christ University Entrance Test (CUET)',
+    'Hotel Management - NCHMJEE and HMCET',
+    'SET (Symbiosis Entrance Test)',
+    'BBA CET',
+    'Other - Please specify in message'
   ];
 
   const handleInputChange = (field: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,8 +53,36 @@ const ContactFormSection: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Create WhatsApp message with form data
+    const message = `*New Inquiry from C.A.W.S. Website*
+    
+*Name:* ${formData.firstName} ${formData.lastName}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Course Interest:* ${formData.course}
+*Message:* ${formData.message}
+
+*Sent via C.A.W.S. Contact Form*`;
+
+    // WhatsApp number (8788568664)
+    const whatsappNumber = '+918788568664'; // Add country code for India
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Optional: Reset form after sending
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      course: '',
+      message: ''
+    });
   };
 
   const quickActions = [

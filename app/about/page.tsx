@@ -1,6 +1,5 @@
 import Navigation from '@/components/Navigation';
 import AboutHeroSection from '@/components/AboutHeroSection';
-import JourneyNumbersSection from '@/components/JourneyNumbersSection';
 import OurStorySection from '@/components/OurStorySection';
 import CoreValuesSection from '@/components/CoreValuesSection';
 import AboutCTASection from '@/components/AboutCTASection';
@@ -11,7 +10,6 @@ export default function AboutPage() {
     <main>
       <Navigation />
       <AboutHeroSection />
-      <JourneyNumbersSection />
       <OurStorySection />
       <CoreValuesSection />
       <AboutCTASection />
