@@ -8,24 +8,24 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <Container maxWidth="xl" sx={{ py: 8 }}>
+    <Container maxWidth="xl" sx={{ py: { xs: 4, md: 8 }, px: { xs: 2, sm: 3 } }}>
       <Box 
         sx={{ 
           display: 'flex', 
           flexDirection: { xs: 'column', lg: 'row' }, 
           alignItems: 'center', 
-          gap: 6 
+          gap: { xs: 4, md: 6 }
         }}
       >
         {/* Left Side - Content */}
-        <Box sx={{ flex: 1, order: { xs: 2, lg: 1 } }}>
+        <Box sx={{ flex: 1, order: { xs: 2, lg: 1 }, px: { xs: 1, sm: 0 } }}>
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: '2.5rem', md: '3.5rem' },
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem' },
               fontWeight: 'bold',
               lineHeight: 1.2,
-              mb: 3,
+              mb: { xs: 2, md: 3 },
               color: '#1f2937',
             }}
           >
@@ -51,8 +51,8 @@ const HeroSection = () => {
             variant="h6"
             sx={{
               color: '#6b7280',
-              mb: 4,
-              fontSize: { xs: '1.1rem', md: '1.25rem' },
+              mb: { xs: 2, md: 4 },
+              fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
               lineHeight: 1.6,
             }}
           >
@@ -62,8 +62,8 @@ const HeroSection = () => {
           <Typography
             sx={{
               color: '#4b5563',
-              mb: 6,
-              fontSize: { xs: '1rem', md: '1.1rem' },
+              mb: { xs: 4, md: 6 },
+              fontSize: { xs: '0.95rem', md: '1.1rem' },
               lineHeight: 1.6,
             }}
           >
@@ -73,7 +73,7 @@ const HeroSection = () => {
           </Typography>
 
           {/* CTA Buttons */}
-          <Box sx={{ display: 'flex', gap: 3, flexDirection: { xs: 'column', sm: 'row' }, mb: 6 }}>
+          <Box sx={{ display: 'flex', gap: { xs: 2, sm: 3 }, flexDirection: { xs: 'column', sm: 'row' }, mb: { xs: 4, md: 6 } }}>
             <Link href="/contact" style={{ textDecoration: 'none' }}>
               <Button
                 variant="contained"
@@ -123,7 +123,7 @@ const HeroSection = () => {
           </Box>
 
           {/* Stats */}
-          <Box sx={{ display: 'flex', gap: 4 }}>
+          <Box sx={{ display: 'flex', gap: { xs: 2, md: 4 } }}>
             <Box sx={{ textAlign: 'center', flex: 1 }}>
               <Typography
                 variant="h4"
@@ -158,35 +158,24 @@ const HeroSection = () => {
         </Box>
 
         {/* Right Side - Image */}
-        <Box sx={{ flex: 1, order: { xs: 1, lg: 2 } }}>
+        <Box sx={{ flex: 1, order: { xs: 1, lg: 2 }, width: '100%' }}>
           <Box
             sx={{
               position: 'relative',
-              borderRadius: '20px',
               overflow: 'hidden',
-              height: { xs: '300px', md: '400px' },
-              boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+              height: { xs: '214px', sm: '320px', md: '400px' }
             }}
           >
             <Image
               src="/sarika-hero-image.jpg"
               alt="Sarika - CAWS Founder and Expert Instructor"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{
-                objectFit: 'cover',
+                objectFit: 'contain',
                 objectPosition: 'center',
               }}
               priority
-            />
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                background: 'linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(16, 185, 129, 0.1))',
-              }}
             />
           </Box>
         </Box>
