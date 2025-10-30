@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Box, Typography, Container, IconButton, Divider } from '@mui/material';
-import { Facebook, Twitter, Instagram, LinkedIn, LocationOn, Phone, Email } from '@mui/icons-material';
+import { Facebook, Instagram, YouTube, LocationOn, Phone, Email } from '@mui/icons-material';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -89,24 +89,41 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <Box sx={{ display: 'flex', gap: 1 }}>
-              {[Facebook, Twitter, Instagram, LinkedIn].map((Icon, index) => (
-                <IconButton
-                  key={index}
-                  sx={{
-                    backgroundColor: '#374151',
-                    color: '#9ca3af',
-                    width: 40,
-                    height: 40,
-                    '&:hover': {
-                      backgroundColor: '#3b82f6',
-                      color: 'white',
-                    },
-                    transition: 'all 0.3s ease',
-                  }}
-                >
-                  <Icon sx={{ fontSize: 20 }} />
-                </IconButton>
-              ))}
+              {[
+{
+    icon: YouTube,
+    href: 'https://youtube.com/@crackaptitudewithsarika?si=hTfVhRhAkGkTgh18',
+    label: 'YouTube',
+  },
+  {
+    icon: Instagram,
+    href: 'https://www.instagram.com/cawscrackaptitudewithsarika?igsh=cmpqcGNiMTl5cDRj',
+    label: 'Instagram',
+  },
+  {
+    icon: Facebook,
+    href: 'https://www.facebook.com/profile.php?id=61571427056689',
+    label: 'Facebook',
+  },
+].map(({ icon: Icon, href, label }, index) => (
+  <Link href={href} key={label} target="_blank" rel="noopener noreferrer" aria-label={label}>
+    <IconButton
+      sx={{
+        backgroundColor: '#374151',
+        color: '#9ca3af',
+        width: 40,
+        height: 40,
+        '&:hover': {
+          backgroundColor: '#3b82f6',
+          color: 'white',
+        },
+        transition: 'all 0.3s ease',
+      }}
+    >
+      <Icon sx={{ fontSize: 20 }} />
+    </IconButton>
+  </Link>
+))}
             </Box>
           </Box>
 

@@ -51,21 +51,6 @@ const CoursesHeroSection = () => {
           >
             Comprehensive coaching programs designed to help you excel in competitive examinations
           </Typography>
-
-          {/* Secondary Description */}
-          <Typography
-            sx={{
-              color: '#4b5563',
-              fontSize: { xs: '1rem', md: '1.1rem' },
-              lineHeight: 1.8,
-              maxWidth: '800px',
-              mx: 'auto',
-              textAlign: 'center',
-            }}
-          >
-            From banking and SSC to UPSC and defence services, our expertly crafted courses provide you
-            with the knowledge, practice, and confidence needed to succeed.
-          </Typography>
         </Box>
       </Container>
     </Box>

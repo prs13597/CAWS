@@ -29,10 +29,7 @@ const ContactFAQSection: React.FC = () => {
       question: "Do you provide study materials?",
       answer: "Yes, we provide comprehensive study materials, practice papers, and access to our digital library for all enrolled students."
     },
-    {
-      question: "Are there any scholarships available?",
-      answer: "We offer merit-based scholarships and financial assistance for economically disadvantaged students. Contact us for details."
-    },
+
     {
       question: "Can I attend demo classes?",
       answer: "Absolutely! We offer free demo classes to help you understand our teaching methodology before enrollment."
