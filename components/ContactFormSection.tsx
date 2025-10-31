@@ -85,24 +85,6 @@ const ContactFormSection: React.FC = () => {
     });
   };
 
-  const quickActions = [
-    {
-      icon: <CalendarToday sx={{ fontSize: 20 }} />,
-      text: "Schedule Demo Class",
-      color: "#3b82f6"
-    },
-    {
-      icon: <Download sx={{ fontSize: 20 }} />,
-      text: "Download Brochure",
-      color: "#059669"
-    },
-    {
-      icon: <Book sx={{ fontSize: 20 }} />,
-      text: "Book Counselling Session",
-      color: "#dc2626"
-    }
-  ];
-
   return (
     <Box sx={{ 
       py: { xs: 8, md: 12 },
@@ -268,58 +250,6 @@ const ContactFormSection: React.FC = () => {
                     Send Message
                   </Button>
                 </form>
-              </CardContent>
-            </Card>
-          </Box>
-
-          {/* Quick Actions Sidebar */}
-          <Box sx={{ flex: 1 }}>
-            <Card
-              sx={{
-                borderRadius: 3,
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                color: 'white',
-                position: 'sticky',
-                top: 100
-              }}
-            >
-              <CardContent sx={{ p: 4 }}>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: 'bold',
-                    mb: 4,
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 1
-                  }}
-                >
-                  ⚡ Quick Actions
-                </Typography>
-
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                  {quickActions.map((action, index) => (
-                    <Button
-                      key={index}
-                      variant="contained"
-                      startIcon={action.icon}
-                      sx={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                        color: 'white',
-                        fontWeight: 'medium',
-                        py: 2,
-                        borderRadius: 2,
-                        textTransform: 'none',
-                        justifyContent: 'flex-start',
-                        '&:hover': {
-                          backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                        }
-                      }}
-                    >
-                      {action.text}
-                    </Button>
-                  ))}
-                </Box>
               </CardContent>
             </Card>
           </Box>
